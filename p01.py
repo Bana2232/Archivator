@@ -2,16 +2,27 @@ import os
 import sys
 import shutil
 
+from fnmatch import fnmatch
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QTableWidgetItem, QMessageBox
-from PyQt5.uic.properties import QtGui
 
 from main_window_design import Ui_MainWindow
 
 
 def except_hook(cls, exception, traceback):
     sys.__excepthook__(cls, exception, traceback)
+
+
+def human_read_format(n):
+    if n >= 1073741824:
+        return f"{round(n / 2 ** 30, 2)} гигабайт"
+
+    if n >= 1048576:
+        return f"{round(n / 2 ** 20, 2)} мегабайт"
+
+    return f"{round(n / 1024, 2)} килобайт"
 
 
 class Main_window(Ui_MainWindow, QMainWindow):
@@ -77,7 +88,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
             size += os.path.getsize(f"{self.path_line.text()}/{item.text()}")
 
         self.selected_label.setText(
-            f"Выделено: {len(self.file_window.selectedItems())} элементов. Общий размер: {size} байт")
+            f"Выделено: {len(self.file_window.selectedItems())} элементов. Общий размер: {human_read_format(size)}")
 
     def start_init(self):
         files = [i for i in os.listdir(self.path_line.text())]
@@ -88,7 +99,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
             size += os.path.getsize(f"{self.path_line.text()}/{item}")
 
         self.file_window.setRowCount(len(files))
-        self.total_label.setText(f"Всего: {len(files)} элементов. Общий размер: {size} байт")
+        self.total_label.setText(f"Всего: {len(files)} элементов. Общий размер: {human_read_format(size)}")
 
         for i in range(len(files)):
             item = QTableWidgetItem()
@@ -123,7 +134,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
                 size += os.path.getsize(f"{self.path_line.text()}/{item}")
 
             self.file_window.setRowCount(len(files))
-            self.total_label.setText(f"Всего: {len(files)} элементов. Общий размер: {size} байт")
+            self.total_label.setText(f"Всего: {len(files)} элементов. Общий размер: {human_read_format(size)}")
 
             for i in range(len(files)):
                 item = QTableWidgetItem()
