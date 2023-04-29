@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1031</width>
+    <height>611</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Archivator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>1</number>
+    </property>
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="horizontalFrame">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="archive">
+         <property name="minimumSize">
+          <size>
+           <width>140</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>140</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+}
+
+QPushButton:hover{
+background-color: rgba(255, 255, 255, 70);
+}
+
+QPushButton:pressed{
+background-color: rgb(87, 227, 137);
+}</string>
+         </property>
+         <property name="text">
+          <string>Создать архив</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../PycharmProjects/web_yl/archivator/icons/inbox-archive-line.png</normaloff>../PycharmProjects/web_yl/archivator/icons/inbox-archive-line.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="autoRepeat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="extract">
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+}
+
+QPushButton:hover{
+background-color: rgba(255, 255, 255, 70);
+}
+
+QPushButton:pressed{
+background-color: rgb(87, 227, 137);
+}</string>
+         </property>
+         <property name="text">
+          <string>Извлечь</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../PycharmProjects/web_yl/archivator/icons/inbox-unarchive-line.png</normaloff>../PycharmProjects/web_yl/archivator/icons/inbox-unarchive-line.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="delete_2">
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+}
+
+QPushButton:hover{
+background-color: rgba(255, 255, 255, 70);
+}
+
+QPushButton:pressed{
+background-color: rgb(87, 227, 137);
+}</string>
+         </property>
+         <property name="text">
+          <string>Удалить</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../PycharmProjects/web_yl/archivator/icons/delete-bin-line.png</normaloff>../PycharmProjects/web_yl/archivator/icons/delete-bin-line.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="horizontalFrame">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="up_button">
+         <property name="minimumSize">
+          <size>
+           <width>41</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+}
+
+QPushButton:hover{
+background-color: rgba(255, 255, 255, 70);
+}
+
+QPushButton:pressed{
+background-color: rgb(87, 227, 137);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../PycharmProjects/web_yl/archivator/icons/corner-left-up-fill.png</normaloff>../PycharmProjects/web_yl/archivator/icons/corner-left-up-fill.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="path_line">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #ced4da;
+    padding-left: 5px;
+} 
+</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="file_window">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>true</bool>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::DragDrop</enum>
+      </property>
+      <property name="defaultDropAction">
+       <enum>Qt::CopyAction</enum>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Имя</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Размер</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Тип</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Изменён</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="horizontalFrame">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>3</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="total_label">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Всего:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="horizontalFrame">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignLeft|Qt::AlignTop">
+           <widget class="QLabel" name="selected_label">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Выделено:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1031</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
