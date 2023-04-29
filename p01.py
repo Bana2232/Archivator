@@ -17,10 +17,10 @@ def except_hook(cls, exception, traceback):
 
 def human_read_format(n):
     if n >= 1073741824:
-        return f"{round(n / 2 ** 30, 2)} гигабайт"
+        return f"{round(n / (2 ** 30), 2)} гигабайт"
 
     if n >= 1048576:
-        return f"{round(n / 2 ** 20, 2)} мегабайт"
+        return f"{round(n / (2 ** 20), 2)} мегабайт"
 
     return f"{round(n / 1024, 2)} килобайт"
 
@@ -105,7 +105,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
             item = QTableWidgetItem()
             item.setText(files[i].split("/")[-1])
 
-            if os.path.isdir(files[i]):
+            if os.path.isdir(f"{self.path_line.text()}/{files[i]}"):
                 item.setIcon(QIcon("icons/folder-line.png"))
 
             else:
@@ -140,7 +140,7 @@ class Main_window(Ui_MainWindow, QMainWindow):
                 item = QTableWidgetItem()
                 item.setText(files[i].split("/")[-1])
 
-                if os.path.isdir(files[i]):
+                if os.path.isdir(f"{self.path_line.text()}/{files[i]}"):
                     item.setIcon(QIcon("icons/folder-line.png"))
 
                 else:
